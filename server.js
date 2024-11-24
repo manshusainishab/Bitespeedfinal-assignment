@@ -16,3 +16,7 @@ app.post('/identify', identifyContact);
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 })
+
+app.get('/',(req,res)=>{
+    return res.send(200).json({message: "hyy"})
+})
