@@ -13,10 +13,10 @@ const PORT = process.env.PORT || 5005;
 
 app.post('/identify', identifyContact);
 
-app.listen(PORT, '0.0.0.0' ,() => {
-    console.log(`Server running on port ${PORT}`);
+app.get('/',(req,res)=>{
+    return res.status(200).json({message: "started"});
 })
 
-app.get('/',(req,res)=>{
-    return res.status(200);
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 })
