@@ -18,5 +18,5 @@ app.listen(PORT, () => {
 })
 
 app.get('/',(req,res)=>{
-    return res.send(200).json({message: "hyy"})
+    return res.status(200);
 })
